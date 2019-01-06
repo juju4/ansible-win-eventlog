@@ -11,7 +11,9 @@
   win_shell: "{{ item }}"
   with_items:
     - New-AutologgerConfig -Name 'MyAMSILogger' -Guid "{$((New-Guid).Guid)}" -Start Enabled
-    - Add-EtwTraceProvider -AutologgerName 'MyAMSILogger' -Guid '{2A576B87-09A7-520E-C21A-4942F0271D67}' -Level 0xff -MatchAnyKeyword 0x80000000000001 -Property 0x41
+    - "Add-EtwTraceProvider -AutologgerName 'MyAMSILogger'
+        -Guid '{2A576B87-09A7-520E-C21A-4942F0271D67}'
+        -Level 0xff -MatchAnyKeyword 0x80000000000001 -Property 0x41"
   when: not amsi.stat.exists
 
 - name: Set AMSI logging marker
