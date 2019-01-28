@@ -6,18 +6,18 @@ win_eventlog_maxsize: 315801600
 
 win_eventlog_retention: 0
 win_eventlog_channels:
-  - Microsoft-Windows-PowerShell\/Operational
+  - Microsoft-Windows-PowerShell/Operational
   - Internet Explorer
-  - Microsoft-Windows-WMI-Activity\/Operational
+  - Microsoft-Windows-WMI-Activity/Operational
 ## https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
-  - Microsoft-Windows-WinRM\/Operational
+  - Microsoft-Windows-WinRM/Operational
   - Microsoft-Windows-DistributedCOM
-  - Microsoft-Windows-Sysmon\/Operational
-  - Microsoft-Windows-AppLocker\/EXE and DLL
-  - Microsoft-Windows-AppLocker\/MSI and Script
-  - Microsoft-Windows-AppLocker\/Packaged app-Deployment
-  - Microsoft-Windows-AppLocker\/Packaged app-Execution
-  - Microsoft-Windows-TaskScheduler\/Operational
-  - Microsoft-Windows-DNS-Client\/Operational
+  - Microsoft-Windows-Sysmon/Operational
+  - Microsoft-Windows-AppLocker/EXE and DLL
+  - Microsoft-Windows-AppLocker/MSI and Script
+  - Microsoft-Windows-AppLocker/Packaged app-Deployment
+  - Microsoft-Windows-AppLocker/Packaged app-Execution
+  - Microsoft-Windows-TaskScheduler/Operational
+  - Microsoft-Windows-DNS-Client/Operational
 
 win_eventlog_amsi_logging: false
