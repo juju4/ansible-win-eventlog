@@ -12,6 +12,8 @@
 ## alternative:     wevtutil sl <LogName> /ms:<MaxSizeInBytes>
 ## PS C:\> get-eventlog -list
 
+- debug: var=win_eventlog_maxsize
+
 - name: Base Event Log size review
   win_regedit:
     key: "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\{{ item }}"
@@ -61,3 +63,10 @@
     datatype: dword
     data: "{{ win_eventlog_retention }}"
   with_items: "{{ win_eventlog_channels }}"
+
+- name: Check Logs channel registry entries
+  win_reg_stat:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WINEVT\\Channels\\{{ item }}"
+  with_items: "{{ win_eventlog_channels }}"
+  register: logreg
+- debug: var=logreg
