@@ -7,7 +7,7 @@
 
 ## FIXME! not idempotent unlike win_regedit module but more readable
 - name: update Windows Log event size
-  win_command: "wevtutil sl \"{{ item }}\" /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
+  win_command: "wevtutil sl \"{{ item }}\" /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
   with_items:
     - Microsoft-Windows-Powershell/Admin
     - Microsoft-Windows-Sysmon
@@ -18,18 +18,18 @@
     - Setup
     - Microsoft-Windows-DNS-Client/Operational
     - Microsoft-Windows-DistributedCOM
-#    - Microsoft-Windows-DistributedCOM/Operational
+    # - Microsoft-Windows-DistributedCOM/Operational
     - Microsoft-Windows-Powershell/Operational
     - Microsoft-Windows-WinRM/Operational
-## win10
+    ## win10
     - Microsoft-Windows-WMI-Activity/Operational
-## FIXME! too many arguments, even with quote
-#    - Internel Explorer
+    ## FIXME! too many arguments, even with quote
+    # - Internel Explorer
     - Microsoft-Windows-AppLocker/EXE and DLL
     - Microsoft-Windows-AppLocker/MSI and Script
     - Microsoft-Windows-AppLocker/Packaged app-Deployment
     - Microsoft-Windows-AppLocker/Packaged app-Execution
-#  ignore_errors: true
+    # ignore_errors: true
 
 - name: Ensure TaskScheduler logs are enabled
   win_command: "wevtutil set-log {{ item }} /enabled:true /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"

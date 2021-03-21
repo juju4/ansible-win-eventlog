@@ -12,7 +12,8 @@
 ## alternative:     wevtutil sl <LogName> /ms:<MaxSizeInBytes>
 ## PS C:\> get-eventlog -list
 
-- debug: var=win_eventlog_maxsize
+- name: Debug | win_eventlog_maxsize
+  debug: var=win_eventlog_maxsize
 
 - name: Base Event Log size review
   win_regedit:
@@ -69,4 +70,5 @@
     path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WINEVT\\Channels\\{{ item }}"
   with_items: "{{ win_eventlog_channels }}"
   register: logreg
-- debug: var=logreg
+- name: Debug | logreg
+  debug: var=logreg
