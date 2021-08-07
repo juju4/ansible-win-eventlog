@@ -58,4 +58,3 @@ $ ansible -i .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -
 ## License
 
 BSD 2-clause
-
