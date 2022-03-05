@@ -1,5 +1,5 @@
-[![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7/branch/master?svg=true)](https://ci.appveyor.com/project/juju4/ansible-win-osquery/branch/master)
-[![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7/branch/devel?svg=true)](https://ci.appveyor.com/project/juju4/ansible-win-osquery/branch/devel)
+[![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7/branch/master?svg=true)](https://ci.appveyor.com/project/juju4/ansible-win-eventlog/branch/master)
+[![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7/branch/devel?svg=true)](https://ci.appveyor.com/project/juju4/ansible-win-eventlog/branch/devel)
 
 # Windows eventlog ansible role
 
