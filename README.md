@@ -1,6 +1,3 @@
-[![Build Status - Master](https://travis-ci.org/juju4/ansible-win-eventlog.svg?branch=master)](https://travis-ci.org/juju4/ansible-win-eventlog)
-[![Build Status - Devel](https://travis-ci.org/juju4/ansible-win-eventlog.svg?branch=devel)](https://travis-ci.org/juju4/ansible-win-eventlog/branches)(Syntax Only)
-
 [![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7?svg=true)](https://ci.appveyor.com/project/juju4/ansible-win-eventlog)
 ![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wkfgsgtu75lecei7/branch/devel?svg=true)
 
