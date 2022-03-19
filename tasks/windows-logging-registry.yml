@@ -13,7 +13,7 @@
 ## PS C:\> get-eventlog -list
 
 - name: Debug | win_eventlog_maxsize
-  debug: var=win_eventlog_maxsize
+  ansible.builtin.debug: var=win_eventlog_maxsize
 
 - name: Base Event Log size review
   win_regedit:
@@ -71,4 +71,4 @@
   with_items: "{{ win_eventlog_channels }}"
   register: logreg
 - name: Debug | logreg
-  debug: var=logreg
+  ansible.builtin.debug: var=logreg
