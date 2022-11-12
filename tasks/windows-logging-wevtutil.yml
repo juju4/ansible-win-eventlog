@@ -6,8 +6,8 @@
 ## https://www.malwarearchaeology.com/logging
 
 ## FIXME! not idempotent unlike win_regedit module but more readable
-- name: update Windows Log event size
-  win_command: "wevtutil sl \"{{ item }}\" /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
+- name: Update Windows Log event size
+  ansible.windows.win_command: "wevtutil sl \"{{ item }}\" /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
   with_items:
     - Microsoft-Windows-Powershell/Admin
     - Microsoft-Windows-Sysmon
@@ -32,7 +32,7 @@
     # ignore_errors: true
 
 - name: Ensure TaskScheduler logs are enabled
-  win_command: "wevtutil set-log {{ item }} /enabled:true /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
+  ansible.windows.win_command: "wevtutil set-log {{ item }} /enabled:true /ms:{{ win_eventlog_maxsize }} /rt:true /ab:true"
   with_items:
     - Microsoft-Windows-TaskScheduler/Operational
     - Microsoft-Windows-DNS-Client/Operational
